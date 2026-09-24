@@ -21,11 +21,11 @@ pkg update && pkg upgrade -y
 # Installing Proot
 fail_safe proot-distro
 
-# Logging Into Proot
-proot-distro login debian
-
 # Install Container
 proot-distro install debian
+
+# Logging Into Proot
+proot-distro login debian
 
 # Announce Completition
 echo "Container Installation Complete"

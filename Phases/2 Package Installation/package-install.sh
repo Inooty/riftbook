@@ -22,11 +22,8 @@ echo "Installed Display Packages (Amd)"
     ;;
 aarch64|arm64)
     echo "Installing Display Packages (Arm)"
-fail_safe wget
-fail_safe ca-certificates wget
-wget -O "/usr/share/keyrings/xpra.asc" https://xpra.org/xpra.asc
-cd /etc/apt/sources.list.d/
-wget https://raw.githubusercontent.com/Xpra-org/xpra/master/packaging/repos/trixie/xpra.sources
+fail_safe curl
+curl https://xpra.org/get-xpra.sh | bash
 apt update
 fail_safe xpra xpra-html5 xvfb xauth xclip xdotool dbus-x11
 echo "Installed Display Packages (Arm)"
