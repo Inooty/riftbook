@@ -6,7 +6,7 @@
 ###
 
 <p align="center">
-    <**Riftbook is still in VERY Active Development, Do not use it!**>
+    Riftbook is still in VERY Active Development, Do not use or clone it!
 
 Riftbook is a Chrome & Android Phone utility that auto-installs a Termux Debian Proot Container inside of your machine, using XPRA to Display It inside a webpage, it is designed to be elegant, easy to understand, and a one-and-done install. Nothing more and nothing less.
 
