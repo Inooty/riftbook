@@ -4,12 +4,22 @@
     <img src="Assets/git_banner_1.svg" alt="Riftbook" width="820">
   
 ###
-**Riftbook is still in VERY early development, do not use it!**
+
+<p align="center">
+    <**Riftbook is still in VERY Active Development, Do not use it!**>
+
 Riftbook is a Chrome & Android Phone utility that auto-installs a Termux Debian Proot Container inside of your machine, using XPRA to Display It inside a webpage, it is designed to be elegant, easy to understand, and a one-and-done install. Nothing more and nothing less.
 
 Riftbook uses a clean CLI to create a "Rift" into your new container, all completely hosted remotely, no internet required. It will auto detect your systems architecture and auto install packages according to what it finds, the installer is designed to be modular, so if for example, the "Proot Install" part of the script fails, you can easily just go in and run that part of the script specifically, without needing to touch anything that has already been done.
 
+###
+<p align="center">
+    <img src="Assets/git_banner_6.svg" alt="Riftbook" width="820">
+
 ### 
+Riftbook has not currently been completed, so there is no install guide, BUT I will take the time to write on how *I plan* for people to install Riftbook! So first you would run a simple command that clones the repo and auto runs the install.sh, after that, a CLI would open up, you would wait for everything to install, choose settings, etc, after that it would prompt you to set up a web app, which would have a startup panel, which would auto start the XPRA background process that will open up once on boot (It'll be super light, wont take up much RAM) and start the container, and be able to fully use it! Wowzers!
+
+###
 
 <p align="center">
     <img src="Assets/git_banner_4.svg" alt="Riftbook" width="820">
@@ -41,14 +51,24 @@ The Fancy Graphics don't take up that much storage either, especially because th
 ###
 I created Riftbook to solve a very specific problem, my Chromebook is very locked down, and I needed to access youtube tutorials and such for school work, but of course, most youtube videos were completely innacessible, my laptop is an ARM device, which means I couldn't change the bootloader or do much of anything, so I can up with what is technically the first version of Riftbook, a simple container that used NoVNC to display apps, it wasn't very good, and a lot of it was vibe-coded mid class, but it worked. I eventually wanted to turn it into an actual project, and then I heard about Stardance, so here we are.
 
-### Project To-Do
-No graphic for this, it's just a quick thing I should add to inform people:
-Task that are completed:
+###
+
+<p align="center">
+    <img src="Assets/git_banner_5.svg" alt="Riftbook" width="820">
+
+###
+
+**Task that are completed:**
 - Auto Install Proot & Update Pkg
 - Main Graphics and Iconography for the Project
 
-Task That Are Pending
+**Task That Are Pending**
 - Design CLI
 - Fix this bug where after installing proot and logging into Debian, it wont run all the other commands.
 - Configure XPRA automatically
 - Design the local webpage
+- Get the Desktop Enviroment Working
+- Possibly Create a simple software store
+- Create a web Termux enviroment to test out the project
+- Create Documentation
+- Make the script fully function with 0 errors
