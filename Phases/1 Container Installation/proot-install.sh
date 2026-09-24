@@ -3,9 +3,26 @@
 # Set Up Storage
 termux-setup-storage
 
-# Installing Proot
+# Fail Safe
+fail_safe() {
+    echo "Installing... $@"
+    if ! pkg install -y "$@"; then
+        echo "First Attempt Failed, Restarting..."
+        if ! pkg install -y "$@"; then
+            echo "Install Failed After Second Attempt, Aborting..."
+            exit 1
+        fi
+    fi
+}
+
+# Upgrading & Updating Pkg
 pkg update && pkg upgrade -y
-pkg install proot-distro
+
+# Installing Proot
+fail_safe proot-distro
+
+# Logging Into Proot
+proot-distro login debian
 
 # Install Container
 proot-distro install debian

@@ -12,15 +12,35 @@ fail_safe() {
     fi
 }
 
+# Check System Architecture
+ARCH=$(uname -m)
+case "$ARCH" in
+    x86_64)
+    echo "Installing Display Packages... (Amd)"
+fail_safe xpra xpra-html5 xvfb xauth xclip xdotool dbus-x11
+echo "Installed Display Packages (Amd)"
+    ;;
+aarch64|arm64)
+    echo "Installing Display Packages (Arm)"
+fail_safe wget
+fail_safe ca-certificates wget
+wget -O "/usr/share/keyrings/xpra.asc" https://xpra.org/xpra.asc
+cd /etc/apt/sources.list.d/
+wget https://raw.githubusercontent.com/Xpra-org/xpra/master/packaging/repos/trixie/xpra.sources
+apt update
+fail_safe xpra xpra-html5 xvfb xauth xclip xdotool dbus-x11
+echo "Installed Display Packages (Arm)"
+    ;;
+*)
+    echo "Unknown Architecture, Install Aborted."
+    exit 1
+    ;;
+esac
+
 # Updating & Upgrading Apt
 echo "Updating & Upgrading Apt..."
 apt update && apt upgrade
 echo "Updaded & Upgraded Apt"
-
-# Installing Display Packages
-echo "Installing Display Packages..."
-fail_safe xpra xvfb xauth xclip xdotool
-echo "Installed Display Packages"
 
 # Desktop Envrioment
 echo  "Installing Desktop Enviroment..."

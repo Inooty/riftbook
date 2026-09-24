@@ -1,5 +1,13 @@
 #! /bin/bash
 
+# Script Home
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+# ASCII
+cat Assets/logo.txt
+sleep 2
+
+
 # Warning
 #if command -v pkg >/dev/null 2>&1; then
 #    echo "Installing..."
@@ -7,9 +15,6 @@
 #    echo "This script does not appear to be running inside Termux. Exiting..."
 #    exit 1
 #fi
-
-# Script Home
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 # Check for Hardware
 cd "$SCRIPT_DIR/Phases/0 Detection"
