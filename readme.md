@@ -1,4 +1,5 @@
 # What is Riftbook?
+![WhatsThis](images/git_banner_1.svg)
 Riftbook is a utility for Chromebooks that cannot install the Debian Enviroment inside ChromeOS, either because it does not support it, or for "other" reasons. It uses Termux to install a proot container and displays it on a webpage using Xorg. It's meant to be an install script you just run once, and it works!
 
 ## Why not just do it myself?
