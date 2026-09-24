@@ -24,8 +24,5 @@ fail_safe proot-distro
 # Install Container
 proot-distro install debian
 
-# Logging Into Proot
-proot-distro login debian
-
 # Announce Completition
 echo "Container Installation Complete"

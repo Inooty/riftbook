@@ -8,6 +8,7 @@
 <p align="center">
     Riftbook is still in VERY Active Development, Do not use or clone it!
 
+
 Riftbook is a Chrome & Android Phone utility that auto-installs a Termux Debian Proot Container inside of your machine, using XPRA to Display It inside a webpage, it is designed to be elegant, easy to understand, and a one-and-done install. Nothing more and nothing less.
 
 Riftbook uses a clean CLI to create a "Rift" into your new container, all completely hosted remotely, no internet required. It will auto detect your systems architecture and auto install packages according to what it finds, the installer is designed to be modular, so if for example, the "Proot Install" part of the script fails, you can easily just go in and run that part of the script specifically, without needing to touch anything that has already been done.
@@ -61,10 +62,10 @@ I created Riftbook to solve a very specific problem, my Chromebook is very locke
 **Task that are completed:**
 - Auto Install Proot & Update Pkg
 - Main Graphics and Iconography for the Project
+- Fixed The Bug Where It Would Stop After Installing Debian
 
 **Task That Are Pending**
 - Design CLI
-- Fix this bug where after installing proot and logging into Debian, it wont run all the other commands.
 - Configure XPRA automatically
 - Design the local webpage
 - Get the Desktop Enviroment Working
