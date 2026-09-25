@@ -2,6 +2,7 @@
 
 # Set Up Storage
 termux-setup-storage
+echo "allow-external-apps=true" >> ~/.termux/termux.properties
 
 # Fail Safe
 fail_safe() {
@@ -17,6 +18,7 @@ fail_safe() {
 
 # Upgrading & Updating Pkg
 pkg update && pkg upgrade -y
+
 
 # Installing Proot
 fail_safe proot-distro

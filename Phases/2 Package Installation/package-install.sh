@@ -44,7 +44,22 @@ echo "Updaded & Upgraded Apt"
 
 # Desktop Envrioment
 echo  "Installing Desktop Enviroment..."
-fail_safe lxqt
+#fail_safe lxqt
+select DE in "Sway" "Lxqt"; do
+    case $DE in
+    "Sway")
+        echo "Installing  Sway.."
+        fail_safe sway
+        echo "Installed Sway"
+        ;;
+    "Lxqe")
+        echo "Installing Lxqt..."
+        fail_safe lxqt
+        echo "Installed Lxqt"
+        ;;
+    esac
+    break
+done
 echo "Installed Desktop Enviroment"
 
 # System Apps
