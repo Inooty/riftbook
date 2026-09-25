@@ -13,7 +13,7 @@ fail_safe() {
 }
 
 # Login Into Proot
-proot-distro login debian -- bash /Phases/2 Package Installation/package-install.sh
+proot-distro login debian -- bash Phases/2 Package Installation/package-install.sh
 
 # Check System Architecture
 ARCH=$(uname -m)
