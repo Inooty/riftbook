@@ -1,7 +1,6 @@
 #! /bin/bash
 
-# Set Up Storage
-termux-setup-storage
+# Allow External Apps Config
 echo "allow-external-apps=true" >> ~/.termux/termux.properties
 
 # Fail Safe

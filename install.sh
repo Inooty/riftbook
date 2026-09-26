@@ -1,5 +1,16 @@
 #! /bin/bash
 
+# Set Up Storage
+termux-setup-storage
+
+# Termux Warning
+if command -v pkg >/dev/null 2>&1; then
+    echo "Installing..."
+else
+    echo "This script does not appear to be running inside Termux. Exiting..."
+    exit 1
+fi
+
 # Script Home
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
@@ -13,15 +24,7 @@ sleep 2
 
 # Pid Verification
 wait $INSTALL_PID
-pip install rich
+pip install rich rich-pixels Pillow
 
-# Termux Warning
-if command -v pkg >/dev/null 2>&1; then
-    echo "Installing..."
-else
-    echo "This script does not appear to be running inside Termux. Exiting..."
-    exit 1
-fi
-
-# Python Handoff (Very Crude And Dumb)
-python3 "$SCRIPT_DIR/Phases/status.py" "$SCRIPT_DIR"
+# Python, do your thing
+python3 "$SCRIPT_DIR/Phases/interface.py" "$SCRIPT_DIR"

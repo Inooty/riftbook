@@ -7,6 +7,16 @@ from rich.text import Text
 
 SCRIPT_DIR= sys.argv[1]
 
+# Key Detector 9000
+import readchar
+key = readchar.readkey()
+readchar.key.LEFT
+readchar.key.RIGHT
+readchar.key.ENTER
+
+if key == readchat.key.LEFT:
+    
+
 # Terminal Colonization
 def make_status(message):
     return Align.center(Text(message, style ="bold"), vertical="middle")
